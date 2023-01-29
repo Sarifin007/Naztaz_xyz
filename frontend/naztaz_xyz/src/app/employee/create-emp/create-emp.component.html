@@ -1,0 +1,10 @@
+<p>create-emp works!</p>
+<form #empForm="ngForm" (ngSubmit)="onEmpCre(empForm.value)">
+
+    <label for="">Name</label>
+    <input type="text" name="name" ngModel>
+
+    <label for="">Phone</label>
+    <input type="text" name="phone" ngModel>
+    <button>Submit</button>
+</form>

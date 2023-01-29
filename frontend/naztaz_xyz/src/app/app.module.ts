@@ -3,24 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './common/header/header.component';
-import { FooterComponent } from './common/footer/footer.component';
-import { SidebarComponent } from './common/sidebar/sidebar.component';
-import { HomeComponent } from './common/home/home.component';
+import { CreateEmpComponent } from './employee/create-emp/create-emp.component';
+import { AllEmpComponent } from './employee/all-emp/all-emp.component';
+import { HttpClientModule } from "@angular/common/http";
+import { EmployeService } from './services/employe.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent,
-    HomeComponent
+    CreateEmpComponent,
+    AllEmpComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [EmployeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
